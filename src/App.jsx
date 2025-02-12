@@ -103,11 +103,35 @@
 // export default App
 //EJ 9
 import { useState } from "react"
+import { Opciones } from "./componentes/Opciones"
 function App() {
+  const [valor, setvalor] = useState("");
+  let valores=(valor)=>{
+    setvalor(valor);
+
+  }
   
   return (
     <>
-      
+      <Opciones valor={valores}/>
+      <h1>
+        {
+        valor === "1" ? "hola1" : ""
+        }
+        {
+        valor === "2" ? "hola2" : ""
+        }
+        {
+        valor === "3" ? "hola3" : ""
+        }
+        {
+        valor === "4" ? "hola4" : ""
+        }
+        {
+        valor === "5" ? "hola5" : ""
+        }
+      </h1>
+    
     </>
   )
 }
