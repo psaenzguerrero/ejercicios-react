@@ -64,14 +64,50 @@
 // }
 // export default App
 //EJE 7
+// import { useState } from "react"
+// import Contador from "./componentes/Contador"
+
+// function App() {
+
+//   return (
+//     <>
+//       <Contador/>
+//     </>
+//   )
+// }
+// export default App
+// EJ 8
+// import { useState } from "react"
+// import { Buscador } from "./componentes/Buscador"
+// function App() {
+//   let [palabra, setpalabra] = useState("")
+//   let lidefault = ["123","1234","5678","6789","9012"];
+//   let guardar=(palabra)=>{
+//     setpalabra(palabra);
+//   }
+//   return (
+//     <>
+//       <Buscador guardar={(palabra)=>guardar(palabra)}/>
+//       <ul>
+//         {
+//           lidefault.map((jose,index)=>{
+//             return(
+//               jose.includes(palabra) ?  <li key={index}>{jose}</li> : "" 
+//             )
+//           })
+//         }
+//       </ul>
+//     </>
+//   )
+// }
+// export default App
+//EJ 9
 import { useState } from "react"
-import Contador from "./componentes/Contador"
-
 function App() {
-
+  
   return (
     <>
-      <Contador/>
+      
     </>
   )
 }
