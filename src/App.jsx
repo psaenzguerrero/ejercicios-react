@@ -102,36 +102,62 @@
 // }
 // export default App
 //EJ 9
-import { useState } from "react"
-import { Opciones } from "./componentes/Opciones"
-function App() {
-  const [valor, setvalor] = useState("");
-  let valores=(valor)=>{
-    setvalor(valor);
+// import { useState } from "react"
+// import { Opciones } from "./componentes/Opciones"
+// function App() {
+//   const [valor, setvalor] = useState("");
+//   let valores=(valor)=>{
+//     setvalor(valor);
 
-  }
+//   }
+  
+//   return (
+//     <>
+//       <Opciones valor={valores}/>
+//       <h1>
+//         {
+//         valor === "1" ? "hola1" : ""
+//         }
+//         {
+//         valor === "2" ? "hola2" : ""
+//         }
+//         {
+//         valor === "3" ? "hola3" : ""
+//         }
+//         {
+//         valor === "4" ? "hola4" : ""
+//         }
+//         {
+//         valor === "5" ? "hola5" : ""
+//         }
+//       </h1>
+    
+//     </>
+//   )
+// }
+// export default App
+import { useState } from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Plantilla from "./layout/Plantilla"
+import Ejer1 from "./pages/Ejer1"
+import Ejer2 from "./pages/Ejer2"
+import Ejer3 from "./pages/Ejer3"
+
+function App() {
+  
   
   return (
     <>
-      <Opciones valor={valores}/>
-      <h1>
-        {
-        valor === "1" ? "hola1" : ""
-        }
-        {
-        valor === "2" ? "hola2" : ""
-        }
-        {
-        valor === "3" ? "hola3" : ""
-        }
-        {
-        valor === "4" ? "hola4" : ""
-        }
-        {
-        valor === "5" ? "hola5" : ""
-        }
-      </h1>
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Plantilla/>} >
+          <Route index element={<Ejer1/>}></Route>
+          <Route path="/Ejer2" element={<Ejer2/>}></Route>
+          <Route path="/Ejer3" element={<Ejer3/>}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+      
     </>
   )
 }
