@@ -1,1 +1,4 @@
 @import "tailwindcss";
+.boton{
+    @apply bg-blue-500 text-white px-7 py-3 m-9 rounded-2xl;
+}

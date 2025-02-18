@@ -142,6 +142,7 @@ import Plantilla from "./layout/Plantilla"
 import Ejer1 from "./pages/Ejer1"
 import Ejer2 from "./pages/Ejer2"
 import Ejer3 from "./pages/Ejer3"
+import './App.css'
 
 function App() {
   
@@ -152,7 +153,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Plantilla/>} >
           <Route index element={<Ejer1/>}></Route>
-          <Route path="/Ejer2" element={<Ejer2/>}></Route>
+          <Route path="/:id" element={<Ejer2/>}></Route>
           <Route path="/Ejer3" element={<Ejer3/>}></Route>
         </Route>
       </Routes>
